@@ -76,7 +76,9 @@ export default {
 
     <!-- content section -->
 
-    <section class="container content"></section>
+    <section class="content">
+        <h1 class="container"> Content goes here </h1>
+    </section>
 </template>
 
 <style scoped>
@@ -84,7 +86,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100px;
+    height: 140px;
 }
 
 ul {
@@ -95,17 +97,27 @@ ul {
 }
 
 ul li {
-    list-style-type: none;
     font-weight: bold;
 }
 
 ul li a {
     color: black;
-    padding: 30px 10px;
+    padding: 55px 10px;
 }
 
 ul li a:hover {
     border-bottom: 4px solid #0c7cec;
     color: #0c7cec;
+}
+
+.content {
+    background-color: black;
+}
+
+.content h1 {
+    color: white;
+    height: 140px;
+    display: flex;
+    align-items: center;
 }
 </style>

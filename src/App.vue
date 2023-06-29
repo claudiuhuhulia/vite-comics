@@ -2,11 +2,13 @@
 import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
 import AppFooter from './components/AppFooter.vue';
+import FooterUser from './components/FooterUser.vue';
+
 
 
 export default {
   name: 'Comics',
-  components: { AppHeader, AppMain, AppFooter },
+  components: { AppHeader, AppMain, AppFooter, FooterUser },
   data() {
     return {
 
@@ -19,6 +21,7 @@ export default {
   <AppHeader />
   <AppMain />
   <AppFooter />
+  <FooterUser />
 </template>
 
 
@@ -43,6 +46,12 @@ body {
 a {
   text-decoration: none;
 }
+
+li {
+  list-style-type: none;
+}
+
+
 
 /* utilities */
 .container {
