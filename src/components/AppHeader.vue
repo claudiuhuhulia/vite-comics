@@ -61,16 +61,51 @@ export default {
 </script>
 
 <template>
-    <header>
+    <!-- header -->
+    <header class="container">
         <figure>
-            <img src="../src/assets/img/dc-logo.png" alt="logo">
+            <img src="../assets/img/dc-logo.png" alt="logo">
         </figure>
         <nav>
             <ul>
-                <li v-for="link in navLinks"><a href="#">CHARACTERS</a></li>
-
-
+                <li v-for="link in navLinks" :key="link.text"><a :href=link.url>{{ link.text }}</a></li>
             </ul>
         </nav>
     </header>
+
+
+    <!-- content section -->
+
+    <section class="container content"></section>
 </template>
+
+<style scoped>
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+ul li {
+    list-style-type: none;
+    font-weight: bold;
+}
+
+ul li a {
+    color: black;
+    padding: 30px 10px;
+}
+
+ul li a:hover {
+    border-bottom: 4px solid #0c7cec;
+    color: #0c7cec;
+}
+</style>

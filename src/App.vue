@@ -32,7 +32,7 @@ export default {
 
 /* generics */
 img {
-  max-width: 100%;
+  max-width: 80%;
   height: auto;
 }
 
