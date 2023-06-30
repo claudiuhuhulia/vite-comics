@@ -12,35 +12,64 @@ export default {
     <section class="series">
         <div class="container">
             <div class="card-container">
-                <div class="card">
-                    <img src="https://static.wikia.nocookie.net/marvel_dc/images/f/f8/Action_Comics_Vol_1_1000.jpg/revision/latest?cb=20180412200923"
-                        alt="">
-                    <h3> Action Comics</h3>
+                <div v-for="serie in series" :key="serie.series" class="card">
+                    <figure>
+                        <img :src="serie.thumb" alt="serie">
+                    </figure>
+                    <h3> {{ serie.series }}</h3>
                 </div>
+
             </div>
 
         </div>
+        <div class="load-btn">LOAD MORE</div>
     </section>
 </template>
 
 <style lang="scss" scoped>
 .series {
     background-color: black;
+    height: 650px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.load-btn {
+    background-color: #0c7cec;
+    color: white;
+    padding: 10px 60px;
+    cursor: pointer;
 }
 
 .card-container {
     display: flex;
     flex-wrap: wrap;
+    padding-top: 50px;
+    padding-bottom: 50px;
 
     .card {
         flex-basis: calc(100% / 6);
-        height: 200px;
+        cursor: pointer;
+    }
+
+    figure {
+        height: 175px;
+        overflow: hidden;
 
         img {
-            height: 100%;
-            object-fit: none;
+            height: 141%;
+            object-fit: cover;
             object-position: 50% 0%;
         }
     }
+}
+
+h3 {
+    color: white;
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 1rem;
+    width: 170px;
 }
 </style>
