@@ -13,7 +13,7 @@ export default {
         <div class="container">
             <div class="card-container">
                 <div class="card">
-                    <img src="https://imgs.search.brave.com/aUNyvZBXUulb963JH7KnQm9AMr8bcBoLsiHREOqayIU/rs:fit:612:612:1/g:ce/aHR0cHM6Ly9pNS53/YWxtYXJ0aW1hZ2Vz/LmNvbS9hc3IvOWZm/ZWYzMDMtMGZhYy00/OGRkLTg3ODctYzUy/NTk0MDk2ODAwXzEu/MTc1ZDk1Mjg2NzY0/OGEwOTczMTY2NGMy/MTE1NjNlYWIuanBl/Zz9vZG5XaWR0aD02/MTImb2RuSGVpZ2h0/PTYxMiZvZG5CZz1m/ZmZmZmY"
+                    <img src="https://static.wikia.nocookie.net/marvel_dc/images/f/f8/Action_Comics_Vol_1_1000.jpg/revision/latest?cb=20180412200923"
                         alt="">
                     <h3> Action Comics</h3>
                 </div>
@@ -34,15 +34,12 @@ export default {
 
     .card {
         flex-basis: calc(100% / 6);
-        height: 150px;
-
+        height: 200px;
 
         img {
-
-            width: 100%;
             height: 100%;
-            object-fit: cover;
-
+            object-fit: none;
+            object-position: 50% 0%;
         }
     }
 }
