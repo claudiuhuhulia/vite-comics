@@ -1,38 +1,49 @@
 <script>
 export default {
-    data() {
-        return {
-            ShopSections: [
-                {
-                    img: '<img src="../assets/img/buy-comics-digital-comics.png" alt="">',
-                    text: 'DIGITAL COMICS'
-                }
-            ]
-        }
+    props: {
+        series: Array
     },
-    methods: {
-        getImagePath() {
-            const url = new URL(`../assets/img/${this.img}`, import.meta.url)
-            console.log(url)
-        }
-    }
+
 }
 </script>
 
+
 <template>
-    <!-- shop section -->
-    <section class="bgcshop">
+    <section class="series">
         <div class="container">
-            <ul>
-                <li v-for="section in ShopSections" :key="section.text">{{ section.text }}</li>
-            </ul>
+            <div class="card-container">
+                <div class="card">
+                    <img src="https://imgs.search.brave.com/aUNyvZBXUulb963JH7KnQm9AMr8bcBoLsiHREOqayIU/rs:fit:612:612:1/g:ce/aHR0cHM6Ly9pNS53/YWxtYXJ0aW1hZ2Vz/LmNvbS9hc3IvOWZm/ZWYzMDMtMGZhYy00/OGRkLTg3ODctYzUy/NTk0MDk2ODAwXzEu/MTc1ZDk1Mjg2NzY0/OGEwOTczMTY2NGMy/MTE1NjNlYWIuanBl/Zz9vZG5XaWR0aD02/MTImb2RuSGVpZ2h0/PTYxMiZvZG5CZz1m/ZmZmZmY"
+                        alt="">
+                    <h3> Action Comics</h3>
+                </div>
+            </div>
+
         </div>
     </section>
 </template>
 
-<style scoped>
-.bgcshop {
-    background-color: #0c7cec;
-    height: 180px;
+<style lang="scss" scoped>
+.series {
+    background-color: black;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    .card {
+        flex-basis: calc(100% / 6);
+        height: 150px;
+
+
+        img {
+
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+        }
+    }
 }
 </style>

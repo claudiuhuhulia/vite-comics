@@ -75,12 +75,6 @@ export default {
 
 
     <!-- content section -->
-
-    <section class="content">
-        <div class="container">
-            <h1> Content goes here </h1>
-        </div>
-    </section>
 </template>
 
 <style lang="scss" scoped>
@@ -116,18 +110,6 @@ ul {
                 color: #0c7cec;
             }
         }
-    }
-}
-
-
-.content {
-    background-color: black;
-
-    h1 {
-        color: white;
-        height: 140px;
-        display: flex;
-        align-items: center;
     }
 }
 </style>
