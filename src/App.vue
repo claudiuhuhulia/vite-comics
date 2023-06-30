@@ -25,37 +25,6 @@ export default {
 </template>
 
 
-<style>
-/* reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* generics */
-img {
-  max-width: 80%;
-  height: auto;
-}
-
-body {
-  font-family: Condensed, Open Sans;
-}
-
-a {
-  text-decoration: none;
-}
-
-li {
-  list-style-type: none;
-}
-
-
-
-/* utilities */
-.container {
-  margin: 0 auto;
-  max-width: 1200px;
-}
+<style lang="scss">
+@use './assets/scss/style.scss'
 </style>

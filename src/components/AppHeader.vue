@@ -77,11 +77,20 @@ export default {
     <!-- content section -->
 
     <section class="content">
-        <h1 class="container"> Content goes here </h1>
+        <div class="container">
+            <h1> Content goes here </h1>
+        </div>
     </section>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@mixin center-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 header {
     display: flex;
     justify-content: space-between;
@@ -90,34 +99,35 @@ header {
 }
 
 ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include center-flex;
 
+    li {
+        font-weight: bold;
+
+
+
+        a {
+            color: black;
+            padding: 55px 10px;
+            text-transform: uppercase;
+
+            &:hover {
+                border-bottom: 4px solid #0c7cec;
+                color: #0c7cec;
+            }
+        }
+    }
 }
 
-ul li {
-    font-weight: bold;
-}
-
-ul li a {
-    color: black;
-    padding: 55px 10px;
-}
-
-ul li a:hover {
-    border-bottom: 4px solid #0c7cec;
-    color: #0c7cec;
-}
 
 .content {
     background-color: black;
-}
 
-.content h1 {
-    color: white;
-    height: 140px;
-    display: flex;
-    align-items: center;
+    h1 {
+        color: white;
+        height: 140px;
+        display: flex;
+        align-items: center;
+    }
 }
 </style>
