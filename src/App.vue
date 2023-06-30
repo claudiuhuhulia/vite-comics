@@ -4,13 +4,15 @@ import AppMain from './components/AppMain.vue';
 import AppFooter from './components/AppFooter.vue';
 import FooterUser from './components/FooterUser.vue';
 import AppShop from './components/AppShop.vue';
+import MainJumbo from './components/MainJumbo.vue';
+
 
 
 
 
 export default {
   name: 'Comics',
-  components: { AppHeader, AppMain, AppFooter, FooterUser, AppShop },
+  components: { AppHeader, AppMain, AppFooter, FooterUser, AppShop, MainJumbo },
   data() {
     return {
       series: [
@@ -106,6 +108,7 @@ export default {
 
 <template>
   <AppHeader />
+  <MainJumbo />
   <AppMain :series="series" />
   <AppShop />
   <AppFooter />
