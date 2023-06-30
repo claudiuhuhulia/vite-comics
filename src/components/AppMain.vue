@@ -10,6 +10,9 @@ export default {
 
 <template>
     <section class="series">
+        <div class="series-title">
+            CURRENT SERIES
+        </div>
         <div class="container">
             <div class="card-container">
                 <div v-for="serie in series" :key="serie.series" class="card">
@@ -33,6 +36,19 @@ export default {
     display: flex;
     align-items: center;
     flex-direction: column;
+    position: relative;
+}
+
+.series-title {
+    position: absolute;
+    top: -25px;
+    left: 330px;
+    color: white;
+    background-color: #0c7cec;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
 .load-btn {
