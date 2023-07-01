@@ -100,6 +100,23 @@ export default {
           series: 'Catwoman',
           type: 'graphic novel',
         },
+      ],
+      ShopImages: [{
+        image: '../assets/img/buy-comics-digital-comics.png',
+        text: 'DIGITAL COMICS'
+      },
+      {
+        image: '../assets/img/buy-comics-merchandise.png',
+        text: 'DC MERCHANDISE'
+      },
+      {
+        image: '../assets/img/buy-comics-shop-locator.png',
+        text: 'COMIC SHOP LOCATOR'
+      },
+      {
+        image: '../assets/img/buy-comics-subscriptions.png',
+        text: 'SUBSCRIPTION'
+      },
       ]
     }
   }
@@ -110,7 +127,7 @@ export default {
   <AppHeader />
   <MainJumbo />
   <AppMain :series="series" />
-  <AppShop />
+  <AppShop :ShopImages="ShopImages" />
   <AppFooter />
   <FooterUser />
 </template>

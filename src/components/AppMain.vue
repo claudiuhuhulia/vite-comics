@@ -56,6 +56,7 @@ export default {
     color: white;
     padding: 10px 60px;
     cursor: pointer;
+    font-weight: bold;
 }
 
 .card-container {

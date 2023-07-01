@@ -78,11 +78,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@mixin center-flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+@use '../assets/scss/partials/mixin' as *;
 
 
 header {
